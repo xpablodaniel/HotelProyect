@@ -1,77 +1,248 @@
 const almuerzoMenu = [
-            "Empanadas Criollas", "Ensalada Capresse", "Ensalada Lucho’s Cheff", "Tortillin de Papa", "Papas Cheddar", "Tortilla Española", "Papines Rellenos",
-             "Bruschetta Mediterránea", "Ensalada Caesar", "Bastones de Muzzarella Rebozados", "Quesadillas con Pico de Gallo", "Quiché de Calabaza y Muzzarella", "Tacos de Pollo",
-              "Muzzarellitas", "Empanadas Capresse", "Fatay", "Mayonesa de Ave", "Croquetas de Espinaca y Queso Azul", "Jamón con Ensalada Rusa", "Tarta de Jamón y Queso", "Quesadillas",
-              "Mil Hojas de Papa Gratinada"
-        ];
-        almuerzoMenu.push("Crunch de Pollo con Ali - Oli");
-        
+    "Bastones de Muzzarella Rebozados",
+    "Bruschetta Capresse",
+    "Bruschetta Mediterránea",
+    "Buñuelos de Espinaca y Queso Parmesano",
+    "Burritos de Ternera",
+    "Crocante de Muzzarella",
+    "Croquetas de Espinaca y Queso Azul",
+    "Empanada Capresse",
+    "Empanada Cortada a Cuchillo",
+    "Empanada de Carne",
+    "Empanada Gallega",
+    "Ensalada Caesar",
+    "Ensalada Griega",
+    "Ensalada Lucho’s Cheff",
+    "Ensalada Capresse",
+    "Fatay",
+    "Jamón con Ensalada Rusa",
+    "Mayonesa de Ave",
+    "Mil Hojas de Papa",
+    "Muzzarellitas",
+    "Papas Cheddar",
+    "Papines Rellenos",
+    "Pascualina de Verduras",
+    "Quiché de Calabaza y Muzzarella",
+    "Quiché de Humita",
+    "Quiché de Puerro y Pollo",
+    "Quiché de Verduras",
+    "Soufle de Verduras",
+    "Tacos de Pollo",
+    "Tacos de Ternera",
+    "Tarta de Jamón y Queso",
+    "Tarta de Verduras",
+    "Tartaletin de Puerro y Pollo",
+    "Tartin de Verduras",
+    "Tortilla Española",
+    "Tortillin de Papa",
+    "Quesadillas"
+];
+
+        almuerzoMenu.push("Crunch de Pollo");
+       
         const almuerzoSubMenu = [
-            " y Puerro", "con Ensaladilla", "con Panceta y Verdeo", " y Panceta", "con Ensalada Verde", "con Salsa Alexander", "con Ensaladilla Verde", " con Queso y Panceta"
-        ];
+    "con Ensalada Verde",
+    "con Ensaladilla",
+    "con Ensaladilla Verde",
+    "con Panceta y Verdeo",
+    "con Pesto de Albahaca",
+    "con Pico de Gallo",
+    "con Pollo",
+    "con Queso y Panceta",
+    "con Salsa Alexander",
+    "con Salsa Blanca",
+    "con Salsa Criolla",
+    "con Mojo Rojo",
+    
+    "Puerro y Panceta",
+    "y Panceta",
+    "y Puerro"
+];
+
         almuerzoSubMenu.push(" ");
-        
+       
         almuerzoMenu.sort();
         almuerzoSubMenu.sort();
-        
+       
         const almuerzoSelect = document.getElementById('almuerzo-select');
         const almuerzoSubMenuSelect = document.getElementById('almuerzo-submenu');
         const cenaSelect = document.getElementById('cena-select');
         const cenaSubMenuSelect = document.getElementById('cena-submenu');
         const postreSelect = document.getElementById('postre-select');
         const postreSubMenuSelect = document.getElementById('postre-submenu');
-        
+       
         function addToSelect(item, select) {
             let option = document.createElement('option');
             option.textContent = item;
             select.appendChild(option);
         }
-        
+       
         almuerzoMenu.forEach(item => addToSelect(item, almuerzoSelect));
         almuerzoSubMenu.forEach(item => addToSelect(item, almuerzoSubMenuSelect));
-        
+       
         const cenaMenu = [
-            "Muslo Braseado al Limón", "Milanesa de Peceto", "Ravioli de Espinaca Mediterráneo", "Lasagna de Berenjenas",
-            "Suprema de Pollo", "Pechugas al Verdeo", "Tallarines Mediterráneo", "Tallarines a la Parisienne","Tallarines con Salsa Alfredo",
-            "Ñoquis a la Parisienne",
-            "Ravioli de Verdura", "Tallarines al Pesto","Raviolon de Espinaca y Ricota",
-            "Muslo al Ajillo", "Lasagna de Carne y Verduras", "Suprema Mariland", "Carré de Cerdo a la Riojana" , "Pastel de Papa y Carne",
-             "Vacío al Horno", "Pechugas al Puerro y Queso Azul", "Escalopines de Ternera", "Tallarines al Pesto de Albahaca", "Bondiola Grillada",
-              "Canelones de Verdura y Salsa Bechamel", "Pechugas Rellenas", "Caneloni a la Rossini", "Carne al Horno"
-        ];
+    "Albóndigas Pomarola",
+    "Canelones de Calabaza y Muzzarella",
+    "Canelones de Verdura",
+    "Canelones de Verdura y Muzzarella",
+    "Caneloni a la Rossini",
+    "Carne al Horno Braseada",
+    "Carne con Papas a la Criolla",
+    "Carré de Cerdo a la Riojana",
+    "Escalopin de Peceto",
+    "Lasagna de Berenjenas",
+    "Lasagna de Carne, Verduras y Muzzarella",
+    "Lasagna de Verduras y Ricota",
+    "Milanesa a la Suiza",
+    "Milanesa de Peceto",
+    "Milanesa de Ternera",
+    "Milanesa de Ternera a la Napolitana",
+    "Muslo al Ajillo",
+    "Muslo Braseado al Limón",
+    "Muslito Napolitano",
+    "Muslitos a la Portuguesa",
+    "Muslitos al Verdeo",
+    "Ñoquis a la Parisienne",
+    "Ñoquis de Papa",
+    "Pastel de Papa y Carne",
+    "Pechugas al Puerro y Queso Azul",
+    "Pechugas al Verdeo",
+    "Pechugas Capresse",
+    "Pechugas Rellenas",
+    "Pizza Libre",
+    "Pollo a la Portuguesa",
+    "Pollo al Verdeo",
+    "Raviolon de Ricota y Verduras",
+    "Raviolones",
+    "Raviolones de Ricota",
+    "Spaghetti",
+    "Suprema Maryland",
+    "Supremitas a la Suiza",
+    "Tallarines",
+    "Tallarines a la Carbonara",
+    "Tallarines a la Parisienne",
+    "Tallarines al Pesto",
+    "Tallarines con Salsa Alfredo",
+    "Tallarines Mediterráneo",
+    "Wok de Verduras Mixto",
+    "Albóndigas Pomarola"
+];
         cenaMenu.push("Tapa de Asado Braseada");
-        
+       
         const cenaSubMenu = [
-            "con Ensalada del Chef", "con Puré de Batatas", "con Puré de Papas", "con Arroz Pilaf", "a la Suiza", "con Queso Gratinado",
-             "con Panceta y Verdeo", "con Papas a la Provenzal", "con Ensaladilla", "con Ensalada", "con Papas al Natural", "con Salsa Pomodoro",
-             "(Champignon, Crema y Blanco de Ave)", "con Puré Mixto", "con Estofado", "con Filetto y Crema",
-             "con Papas Bravas y Criolla", "con Tomates Asados", "con Salsa de Puerros", "con Risotto de Verduras", "con Papas a la Crema de Verdeo",
-        ];
-        
+    "(Champignon, Crema y Blanco de Ave)",
+    "a la Napolitana",
+    "a la Suiza",
+    "con Arroz Azafranado",
+    "con Arroz Cremoso",
+    "con Arroz Pilaf",
+    "con Arroz Tae",
+    "con Ensalada",
+    "con Ensalada del Chef",
+    "con Ensalada Verde",
+    "con Estofado",
+    "con Filetto y Crema",
+    "con Milhojas de Papas",
+    "con Papas",
+    "con Papas a la Crema de Verdeo",
+    "con Papas a la Española",
+    "con Papas a la Provenzal",
+    "con Papas al Natural",
+    "con Papas Bravas",
+    "con Papas Especiadas",
+    "con Papas Fritas",
+    "con Puré de Batatas",
+    "con Puré de Papas",
+    "con Puré Marmolado",
+    "con Puré Mixto",
+    "con Ragú de Ternera",
+    "con Risotto de Verduras",
+    "con Rúcula, Parmesano y Tomates Cherry",
+    "con Salsa Bolognesa",
+    "con Salsa Bechamel",
+    "con Salsa Filetto",
+    "con Salsa Mediterránea",
+    "con Salsa Mixta",
+    "con Salsa Pomodoro",
+    "con Salsa Rose",
+    "con Salsa Rossini",
+    "con Salsa de Puerros",
+    "con Tomates Asados",
+    "con Vegetales al Horno",
+    "con Queso Gratinado",
+    "con Panceta y Verdeo"
+];
+
+       
         cenaSubMenu.push(" ");
-        
+       
         const postreMenu = [
-            "Flan de Naranja", "Helado de Americana","Helado de Chocolate", "Helado Almendrado", "Crepe de Manzanas y Canela",
-            "Budín de Pan", "Bombón Suizo", "Brownie de Chocolate", "Ensalada de Frutas", "Mousse de Chocolate", "Crepe de Frutas", "Flan con Crema"
-            , "Manzanas Asadas", "Duraznos en Almibar", "Compota de Manzanas", "Helado Tricolor", "Copa Helada Suteba", "Queso y Dulce Par", "Tiramisú"
-        ];
-        postreMenu.push("Crumble de Manzana");
-        
+    "Bombón Suizo",
+    "Brownie de Chocolate",
+    "Budín de Pan",
+    "Cheese Cake",
+    "Compota de Manzanas",
+    "Copa de Frutas",
+    "Copa Helada",
+    "Copa Helada Suteba",
+    "Crepe de Frutas",
+    "Crepe de Manzanas y Canela",
+    "Delicia de Chocolate",
+    "Duraznos en Almibar",
+    "Ensalada de Frutas",
+    "Flan Casero",
+    "Flan de Naranja",
+    "Helado",
+    "Helado Almendrado",
+    "Helado de Americana",
+    "Helado de Chocolate",
+    "Helado Tricolor",
+    "Manzanas Asadas",
+    "Mousse de Chocolate",
+    "Peras al Borgoña",
+    "Queso y Dulce Par",
+    "Tarantella de Manzanas",
+    "Tiramisú",
+    "Trifle de Chocolate"
+];
+
+        postreMenu.push("Crumble de Manzana y Canela");
+       
         const postreSubMenu = [
-            "con Dulce de Leche", "con Praline de Frutos Secos", "con Nueces Tostadas", "con Salsa de Chocolate", "con Helado y Nueces Garrapiñadas",
-            "con Crema Chantilly", "con Salsa de Frutos Rojos", "de Chocolate", "Mixto", "con Helado", "y Crema de Limón", "con Crema y Canela",
-             "y Crema de Caramelo","(Queso, Batata y Membrillo)", "y Crema de Arándanos"
-        ];
-        
+    "(Queso, Batata y Membrillo)",
+    "con Coulis de Frutos Rojos",
+    "con Crema Chantilly",
+    "con Crema y Canela",
+    "con Crema de Arándanos",
+    "con Crema de Caramelo",
+    "con Crema Oreo",
+    "con Dulce de Leche",
+    "con Dulce de Leche y Crema",
+    "con Frutas de Estación",
+    "con Frutos del Bosque",
+    "con Helado de Americana",
+    "con Helado y Nueces Tostadas",
+    "con Nueces Tostadas",
+    "con Praline de Frutos Secos",
+    "con Reducción de Vino y Frutos Rojos",
+    "con Salsa de Chocolate",
+    "con Salsa de Frutos Rojos",
+    "de Chocolate",
+    "Mixto",
+    "y Crema de Limón",
+    "y Nueces"
+];
+
+       
         postreSubMenu.push(" ");
-        
+       
         cenaMenu.sort();
         cenaSubMenu.sort();
         postreMenu.sort();
         postreSubMenu.sort();
-        
+       
         cenaMenu.forEach(item => addToSelect(item, cenaSelect));
         cenaSubMenu.forEach(item => addToSelect(item, cenaSubMenuSelect));
-        
+       
         postreMenu.forEach(item => addToSelect(item, postreSelect));
         postreSubMenu.forEach(item => addToSelect(item, postreSubMenuSelect));
