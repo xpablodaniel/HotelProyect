@@ -125,7 +125,7 @@ const almuerzoMenu = [
     "Tallarines con Salsa Alfredo",
     "Tallarines Mediterráneo",
     "Wok de Verduras Mixto",
-    "Albóndigas Pomarola"
+    
 ];
         cenaMenu.push("Tapa de Asado Braseada");
        
